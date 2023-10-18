@@ -29,7 +29,7 @@
 
 ## ⚙️ Integration with Back-End
 
-This front-end project is designed to seamlessly integrate with its counterpart *back-end project* 👉🏽[Appointment-capstone-backend](https://github.com/lincoln1883/Appointment-capstone-backend). The Back-end project provides the API endpoints and database for the front-end project.
+This front-end project is designed to seamlessly integrate with its counterpart *back-end project* 👉🏽[handyhomehub_backend](https://github.com/jicamargo/handyhomehub_backend). The Back-end project provides the API endpoints and database for the front-end project.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -150,8 +150,8 @@ In order to run this project you need:
 
 ```bash
 open git bash
-git clone https://github.com/lincoln1883/Appointment-capstone-frontend.git
-cd Appointment-capstone-frontend
+git clone https://github.com/jicamargo/handyhomehub_frontend.git
+cd handyhomehub_frontend
 ```
 
 2. Install the dependencies:
@@ -181,7 +181,7 @@ npm start
 
 5. Open your web browser and navigate to: http://localhost:3000/ to access the application.
 
-6. **Back End**: You need to have the back-end running in order to see the run your frontend server, please visit the [Appoinment-capstone-backend](https://github.com/lincoln1883/Appointment-capstone-backend) repository and follow the instructions in the README file.
+6. **Back End**: You need to have the back-end running in order to see the run your frontend server, please visit the [handyhomehub_backend](https://github.com/jicamargo/handyhomehub_backend) repository and follow the instructions in the README file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,7 +217,7 @@ open git bash
 ```
 cd path/to/your/project
 example:
-cd ~/Documents/GitHub/Appointment-capstone-frontend
+cd ~/Documents/GitHub/handyhomehub_frontend
 ```
 
 3. Install project dependencies (if you haven't already) by running:
@@ -298,7 +298,7 @@ You can see a screenshoot of the initial state of the board below:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/lincoln1883/Appointment-capstone-backend/issues).
+Feel free to check the [issues page](https://github.com/jicamargo/handyhomehub_frontend/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
