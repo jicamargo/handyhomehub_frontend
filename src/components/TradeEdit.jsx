@@ -93,7 +93,7 @@ const TradeDelete = () => {
                 } transition-colors`}
                 onClick={() => handleToggleRemoved(trade.id, trade.removed)}
               >
-                { 'Edit' }
+                Edit
               </button>
             </div>
           </div>
