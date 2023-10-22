@@ -18,6 +18,7 @@ const Navbar = () => {
     { path: '/trade/reservations', text: 'My Reservations' },
     { path: '/trade/add', text: 'Add Trade' },
     { path: '/trade/delete', text: 'Delete Trade' },
+    { path: '/trade/edit', text: 'Edit Trade' },
   ];
 
   const userLinks = [
