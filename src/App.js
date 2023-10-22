@@ -8,6 +8,7 @@ import ReserveFromTd from './pages/ReserveFromTd';
 import Reserve from './pages/Reserve';
 import AddTrades from './pages/AddTrades';
 import DeleteTrade from './pages/DeleteTrade';
+import EditTrade from './pages/EditTrade';
 import ListTrades from './pages/ListTrades';
 import './App.css';
 import Login from './components/auth/Login';
@@ -27,6 +28,7 @@ const App = () => (
       <Route path="/trade/reserve/:tradeId" element={<ReserveFromTd />} />
       <Route path="add" element={<AddTrades />} />
       <Route path="delete" element={<DeleteTrade />} />
+      <Route path="edit" element={<EditTrade />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   </Routes>

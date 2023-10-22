@@ -1,7 +1,7 @@
 import React from 'react';
 import TradeEdit from '../components/TradeEdit';
 
-const DeleteTrade = () => (
+const EditTrade = () => (
   <>
     <TradeEdit />
   </>
