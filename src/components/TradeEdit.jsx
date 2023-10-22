@@ -27,16 +27,15 @@ const TradeDelete = () => {
       <div className="text-center mt-4">
         <img
           src={loadingImage}
-          alt="Loading trades..."
+          alt="Loading..."
         />
       </div>
     );
   }
 
-  const handleToggleRemoved = (tradeId, isRemoved) => {
+  const OpenEditTrade = (tradeId) => {
     const updatedTrade = {
       id: tradeId,
-      removed: !isRemoved,
     };
     dispatch(updateRemoveTrade(updatedTrade));
   };
@@ -49,51 +48,27 @@ const TradeDelete = () => {
       <p className="text-sm text-gray-500 mb-6">
         Click on a trade to edit its details
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-4">
         {trades.map((trade) => (
           <div
             key={trade.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer relative"
+            className="flex flex-row justify-between bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer relative"
           >
-            <div
-              className={`bg-cover bg-center bg-no-repeat h-72 ${
-                trade.removed ? 'grayscale' : ''
-              } transition-all duration-300`}
-              style={{ backgroundImage: `url(${trade.image})` }}
+            <img
+              src={trade.image}
+              alt={trade.name}
+              className="top-0 left-0 w-20"
             />
-            <div className="p-6 bg-black backdrop-filter bg-opacity-50 absolute inset-0 flex flex-col items-center justify-center text-white">
-              <h5
-                className={`text-2xl font-semibold ${
-                  trade.removed
-                    ? 'text-gradient text-outline'
-                    : 'text-white text-shadow'
-                }`}
-              >
-                {trade.name}
-              </h5>
-              <button
-                type="button"
-                className={`text-sm mt-4 px-4 py-2 rounded-md shadow-md ${
-                  trade.removed
-                    ? 'bg-gray-300 text-neutral-600 hover:bg-green-300 hover:text-neutral-800'
-                    : 'bg-red-500 text-white hover:bg-red-600 hover:text-white'
-                } transition-colors`}
-                onClick={() => handleToggleRemoved(trade.id, trade.removed)}
-              >
-                {trade.removed ? 'Restore' : 'Remove'}
-              </button>
-              <button
-                type="button"
-                className={`text-sm mt-4 px-4 py-2 rounded-md shadow-md ${
-                  trade.removed
-                    ? 'bg-gray-300 text-neutral-600 hover:bg-green-300 hover:text-neutral-800'
-                    : 'bg-red-500 text-white hover:bg-red-600 hover:text-white'
-                } transition-colors`}
-                onClick={() => handleToggleRemoved(trade.id, trade.removed)}
-              >
-                Edit
-              </button>
-            </div>
+            <h5 className="font-semibold text-black text-shadow w-60">
+              {trade.name}
+            </h5>
+            <button
+              type="button"
+              className="w-20 text-sm px-4 py-4 rounded-md shadow-md bg-red-500 text-white hover:bg-red-600 hover:text-white transition-colors"
+              onClick={() => OpenEditTrade(trade.id)}
+            >
+              Edit
+            </button>
           </div>
         ))}
       </div>
