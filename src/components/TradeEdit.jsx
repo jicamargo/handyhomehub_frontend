@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import Lottie from 'lottie-react';
 import { fetchTrades, updateRemoveTrade } from '../redux/reducers/tradesSlice';
 import { getUserRole } from '../utils/userStorage';
-// import animationData from '../assets/images/loader-bals.json';
 import loadingImage from '../assets/images/loading.gif';
 
 const TradeDelete = () => {
@@ -28,8 +26,8 @@ const TradeDelete = () => {
     return (
       <div className="text-center mt-4">
         <img
-          src={loadingImage} // Use the imported image here
-          alt="Loading..."
+          src={loadingImage}
+          alt="Loading trades..."
         />
       </div>
     );
